@@ -16,6 +16,7 @@ while True:
     messages.append(HumanMessage(content=prompt))
     response = model.invoke(messages)
     print(response.content)
+    print(response.usage_metadata["total_tokens"])
     
     # You can create AIMessage or a dict with role assistant
     # messages.append( {"role" : "assistant", "content" : response.content})

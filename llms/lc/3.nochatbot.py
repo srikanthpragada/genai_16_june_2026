@@ -10,3 +10,4 @@ while True:
         break 
     response = model.invoke(prompt)
     print(response.content)
+    print(response.usage_metadata["total_tokens"])
